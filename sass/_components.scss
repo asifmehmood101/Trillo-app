@@ -1,0 +1,93 @@
+.logo {
+    height: 3.25rem;
+    margin-left: 2rem;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 40%;
+    &__input {
+        margin-right: -3.5rem;
+        border-radius: 10rem;
+        padding: 0.7rem 2rem;
+        border: none;
+        width: 90%;
+        font-size: inherit;
+        font-family: inherit;
+        background-color: var(--color-grey-light-2);
+        transition: all 0.3s;
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: var(--color-grey-light-3);
+        }
+    }
+    &__button {
+        border: none;
+        background-color: var(--color-grey-light-2);
+        &:focus {
+            outline: none;
+        }
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        fill: var(--color-grey-dark-3);
+    }
+}
+
+.user-nav {
+    align-self: stretch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &>* {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%;
+        transition: all 0.5s;
+        &:hover {
+            background-color: var(--color-grey-light-2);
+        }
+    }
+    &__icon-box {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    &__icon {
+        height: 2.5rem;
+        width: 2.5rem;
+        fill: var(--color-grey-dark-1);
+    }
+    &__notification {
+        background-color: var(--color-primary-dark);
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--color-grey-light-3);
+        position: absolute;
+        top: 1.5rem;
+        right: 1.1rem;
+    }
+    &__user {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+    &__user-photo {
+        height: 3.75rem;
+        width: 3.75rem;
+        border-radius: 50%;
+    }
+    &__user-name {}
+}

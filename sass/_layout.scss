@@ -12,7 +12,7 @@
     align-items: center;
     background-color: #fff;
     height: 7rem;
-    border-bottom: var(--color-grey-light-2);
+    border-bottom: 1px solid var(--color-grey-light-2);
     font-size: 1.4rem;
 }
 
@@ -30,6 +30,5 @@
 
 .hotel-view {
     height: 80rem;
-    background-color: red;
     flex: 1;
 }

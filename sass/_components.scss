@@ -89,5 +89,59 @@
         width: 3.75rem;
         border-radius: 50%;
     }
-    &__user-name {}
+}
+
+.side-nav {
+    list-style: none;
+    font-size: 1.4rem;
+    margin-top: 3.5rem;
+    &__item {
+        position: relative;
+        &:not(:last-child) {
+            margin-bottom: 0.5rem;
+        }
+    }
+    &__icon {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 2rem;
+        fill: currentColor;
+    }
+    &__link:link,
+    &__link:visited {
+        position: relative;
+        display: flex;
+        align-items: center;
+        color: var(--color-grey-light-1);
+        text-decoration: none;
+        padding: 1.5rem 3rem;
+        z-index: 10;
+        text-transform: uppercase;
+    }
+    &__item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--color-primary);
+        transform: scaleY(0);
+        transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
+    }
+    &__item:active::before {
+        background-color: var(--color-primary-light);
+    }
+    &__item:hover::before,
+    &__item--active::before {
+        transform: scaleY(1);
+        width: 100%;
+    }
+}
+
+.legal {
+    font-size: 1.2rem;
+    color: var(--color-grey-light-4);
+    text-align: center;
+    padding: 2.5rem;
 }

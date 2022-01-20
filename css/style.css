@@ -170,6 +170,19 @@ body {
     width: 1.75rem;
     height: 1.75rem;
     fill: var(--color-primary); }
+  .overview__rating {
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #fff;
+    background-color: var(--color-primary);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    margin-left: 2rem; }
+  .overview__rating-avg {
+    font-size: 2.25rem; }
 
 .btn-location {
   border: none;
@@ -183,6 +196,110 @@ body {
     outline: none;
     animation: pulsate 0.5s infinite;
     -webkit-animation: pulsate 0.5s infinite; }
+
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem; }
+
+.list {
+  margin: 2rem 0;
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--color-grey-light-2);
+  border-top: 1px solid var(--color-grey-light-2);
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap; }
+  .list__item {
+    flex: 0 0 50%;
+    margin-bottom: 0.7rem; }
+  .list__item::before {
+    content: "";
+    padding: 0 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.7rem;
+    background-color: var(--color-primary);
+    -webkit-mask-image: url(../img/chevron-thin-right.svg);
+    mask-image: url(../img/chevron-thin-right.svg);
+    mask-size: cover; }
+
+.recomend {
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-3);
+  display: flex;
+  align-items: center; }
+  .recomend__count {
+    margin-right: auto; }
+  .recomend__photo {
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 3px solid #fff; }
+    .recomend__photo:not(:last-child) {
+      margin-right: -1.15rem; }
+
+.review {
+  background-color: #fff;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+  overflow: hidden; }
+  .review__text {
+    position: relative;
+    margin-bottom: 2rem;
+    z-index: 10; }
+  .review__user {
+    display: flex;
+    align-items: center; }
+  .review__photo {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    margin-right: 1.5rem; }
+  .review__user-box {
+    margin-right: auto; }
+  .review__user-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem; }
+  .review__user-date {
+    font-size: 1rem;
+    color: var(--color-grey-dark-3); }
+  .review__rating {
+    font-size: 2.2rem;
+    color: var(--color-primary);
+    font-weight: 300; }
+  .review::before {
+    content: "\201C";
+    position: absolute;
+    top: -2.75rem;
+    left: -1rem;
+    font-family: sans-serif;
+    font-size: 20rem;
+    line-height: 1;
+    color: var(--color-grey-light-2);
+    z-index: 1; }
+
+.btn-inline {
+  font-size: 400;
+  cursor: pointer;
+  color: var(--color-primary);
+  padding-bottom: 0.5rem;
+  border: none;
+  background-color: var(--color-grey-light-1);
+  border-bottom: 1px solid var(--color-primary);
+  align-self: center;
+  transition: all 0.3s; }
+  .btn-inline__span {
+    margin-left: 0.3rem;
+    transition: margin-left 0.3s; }
+  .btn-inline:hover {
+    color: var(--color-grey-dark-2);
+    border-color: var(--color-grey-dark-2); }
+  .btn-inline:hover .btn-inline__span {
+    margin-left: 0.8rem; }
 
 @keyframes pulsate {
   0% {
@@ -222,8 +339,25 @@ body {
   justify-content: space-between; }
 
 .hotel-view {
-  height: 80rem;
   flex: 1; }
+
+.detail {
+  font-size: 1.4rem;
+  display: flex;
+  padding: 4.5rem;
+  gap: 4.5rem;
+  border-bottom: 1px solid var(--color-grey-light-2); }
+
+.description {
+  background-color: #fff;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  padding: 3rem;
+  flex: 0 0 60%; }
+
+.user-reviews {
+  flex: 1;
+  display: flex;
+  flex-direction: column; }
 
 :root {
   --color-primary: #eb2f64;

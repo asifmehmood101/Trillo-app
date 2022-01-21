@@ -148,7 +148,6 @@
 
 .gallery {
     display: flex;
-    &___item {}
     &__photo {
         width: 100%;
         display: block;
@@ -198,7 +197,6 @@
     &__rating-avg {
         font-size: 2.25rem;
     }
-    &__rating-count {}
 }
 
 .btn-location {
